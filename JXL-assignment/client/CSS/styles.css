@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Piazzolla:wght@200;300;400;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --myfont:'Roboto',sans-serif;
+  --my-btn-font:'Piazzolla',sans-serif;
+  --lg-lightcolor:linear-gradient(to left,rgba(116,235,213,0.6),rgba(159,172,230,0));
+  --lg-color:linear-gradient(to left,#74ebd5,#9face6);
+}
+
+
+body {
+  background-image:var(--lg-lightcolor),url('https://images.unsplash.com/photo-1483366774565-c783b9f70e2c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80 ');
+
+  background-size:100%;
+  background-repeat:no-repeat;
+  font-family: var(--myfont);
+  min-height: 100vh;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
+
+
+.container {
+  background-color: white;
+  border-radius:10px;
+  -webkit-border-radius:10px;
+  box-shadow: 0 0 20px 0 rgba(72,94,116,0.7);
+  overflow:hidden;
+  width:calc(35vw);
+  max-width:100%;
+  text-align: center;
+ 
+}
+
+.form .header_h2{
+    background:var(--lg-color);
+    font-family:var(--my-btn-font);
+  padding:30px ;
+  max-width:100%;
+}
+.form{
+    padding:25px;
+}
+
+.form-control {
+  font-size: 20px;
+  margin-bottom:30px;
+ font-family:var(--my-btn-font);
+  color:#222;
+  text-transform: uppercase;
+  text-align:center;
+  position:relative;
+  
+  
+}
+.form-control label{
+    display:inline-block;
+    margin-bottom:5px;
+    
+
+}
+.form-control input{
+    width:100%;
+    border:2px solid #f0f0f0;
+    display:block;
+    font-family:var(--myfont);
+    font-size:15px;
+    padding:12px;
+}
+.form-control input:focus{
+    outline:0;
+    border-color:#777;
+
+}
+.form-control .success input{
+    border-color:#2ecc71;
+}
+.form-control .error input{
+    border-color:hsl(6, 71%, 49%); 
+}
+.form-control i{
+position:absolute;
+right:12px;
+top:38px;
+visibility: hidden;
+
+}
+
+
+.form-control.success i.fa-circle-check{
+    color:#2ecc71;
+    visibility:visible;
+}
+.form-control.error i.fa-circle-exclamation{
+    color:hsl(6, 71%, 49%); 
+    visibility:visible;
+}
+.form-control small{
+    visibility:hidden;
+    color:hsl(6, 71%, 49%); 
+    position:absolute;
+    left:0;
+}
+.form-control.error small{
+    visibility:visible;
+}
+.form .btn {
+  
+  border: none;
+  background: var(--lg-color);
+  padding: 10px 10px;
+  border-radius: 2px;
+  outline:none;
+  font-family:var(--my-btn-font);
+  margin-top:20px;
+  width:100%;
+  font-weight:bold;
+  min-height: 5vh;
+ 
+ 
+  color: black;
+  font-size: 16px;
+
+}
+
+.form .btn:hover{
+    background:linear-gradient(to right,#74ebd5,#9face6)
+}
+
+.hide{
+  display: none;
+}
+
+.show{
+  display: block;
+}
+
+
+
+@media(max-width:998px){
+    .container{
+        width:calc(100vw-35vw);
+        max-width:100%;
+    }
+}
